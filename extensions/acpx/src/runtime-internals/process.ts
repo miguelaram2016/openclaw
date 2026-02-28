@@ -38,7 +38,6 @@ function resolveSpawnCommand(params: { command: string; args: string[] }): Resol
   return {
     command: "cmd",
     args: ["/c", params.command, ...params.args],
-    shell: true,
   };
 }
 
