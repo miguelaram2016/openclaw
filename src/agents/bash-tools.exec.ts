@@ -379,7 +379,7 @@ export function createExecTool(
         ? buildSandboxEnv({
             defaultPath: DEFAULT_PATH,
             paramsEnv: params.env,
-            sandboxEnv: sandbox.env,
+            sandboxEnv: { ...sandbox.env, ...defaultSkillEnv },
             containerWorkdir: containerWorkdir ?? sandbox.containerWorkdir,
           })
         : mergedEnv;
